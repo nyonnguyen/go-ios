@@ -972,7 +972,7 @@ func runWdaCommand(device ios.DeviceEntry, arguments docopt.Opts) bool {
 
 		if bundleID == "" && testbundleID == "" && xctestconfig == "" {
 			log.Info("no bundle ids specified, falling back to defaults")
-			bundleID, testbundleID, xctestconfig = "com.facebook.WebDriverAgentRunner.xctrunner", "com.facebook.WebDriverAgentRunner.xctrunner", "WebDriverAgentRunner.xctest"
+			bundleID, testbundleID, xctestconfig = "com.nyon.WebDriverAgentRunner.xctrunner", "com.nyon.WebDriverAgentRunner.xctrunner", "WebDriverAgentRunner.xctest"
 		}
 		if bundleID == "" || testbundleID == "" || xctestconfig == "" {
 			log.WithFields(log.Fields{"bundleid": bundleID, "testbundleid": testbundleID, "xctestconfig": xctestconfig}).Error("please specify either NONE of bundleid, testbundleid and xctestconfig or ALL of them. At least one was empty.")
